@@ -1,0 +1,59 @@
+* {
+  color: $white;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// class helper
+.mark {
+  color: $accent-yellow;
+}
+hr.sp-thin {
+  height: 1px;
+  background-image: $grad-to-right;
+}
+hr.sp-bold {
+  height: 5px;
+  background-image: $grad-to-right;
+}
+
+h1 {
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  @include breakpoint(lg) {
+    font-size: 58px;
+  }
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  @include breakpoint(lg) {
+    font-size: 34px;
+  }
+}
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  @include breakpoint(lg) {
+    font-size: 26px;
+  }
+}
+p {
+  font-size: 14px !important;
+  letter-spacing: 1px;
+  color: $gray-text;
+  @include breakpoint(lg) {
+    font-size: 16px;
+  }
+}

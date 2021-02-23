@@ -1,0 +1,12 @@
+// variabels
+$gray-text: #b2b2b2 !default; // gray text
+$gray-dark: #4f4f4f !default; // gray dark
+$accent-dark: #212121 !default; // accent dark
+$secondary-dark: #181818 !default; // primary dark
+$primary-dark: #121212 !default; // seconday dark
+
+$white: #ffffff;
+$accent-orange: #e76f00;
+$accent-yellow: #ffa800;
+$grad-to-right: linear-gradient(to right, $accent-yellow, $accent-orange);
+$grad-to-top: linear-gradient(to top, $accent-orange, $accent-yellow);
