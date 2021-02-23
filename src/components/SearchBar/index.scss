@@ -1,0 +1,16 @@
+@import '../../index.scss';
+
+.search__bar {
+  &__contain {
+    margin: 6px 0 20px;
+    &__input {
+      padding: 10px 16px;
+      width: 100%;
+      color: $gray-text;
+      background-color: $secondary-dark;
+      outline: none;
+      border: none;
+      border-radius: 4px;
+    }
+  }
+}
