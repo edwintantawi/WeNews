@@ -11,9 +11,13 @@ const Cards = () => {
         <div className="row">
           <div className="col-12">
             <h2 className="mb-3">News for you</h2>
-            <Card />
-            <Card />
-            <Card />
+            <div className="grid">
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </div>
           </div>
         </div>
       </div>

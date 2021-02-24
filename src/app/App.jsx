@@ -1,5 +1,4 @@
 import React from 'react';
-import { logo_white } from 'assets';
 import './App.scss';
 import Navbar from 'components/Navbar';
 import SearchBar from 'components/SearchBar';

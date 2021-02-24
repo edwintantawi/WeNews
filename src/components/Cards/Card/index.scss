@@ -1,0 +1,76 @@
+@import '../../../index.scss';
+
+.news__card {
+  cursor: pointer;
+
+  width: 100%;
+
+  &__head {
+    background-image: url('../../../assets/images/dummy.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: $secondary-dark;
+    height: 200px;
+    // max-width: 370px;
+    width: 100%;
+
+    position: relative;
+    transition: 300ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-image: linear-gradient(
+        to top,
+        #181818fa,
+        #181818be,
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+  .wrap {
+    position: relative;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 6px;
+    // height: 370px;
+    // max-width: 370px;
+    width: 100%;
+
+    margin-bottom: 12px;
+
+    .text {
+      .news__source {
+        background-image: $grad-to-right;
+        padding: 6px 30px 6px 18px;
+        width: fit-content;
+        border-bottom-right-radius: 60px;
+        font-size: 14px;
+        position: absolute;
+        top: 0;
+      }
+      .news__title {
+        position: absolute;
+        margin: 0;
+        bottom: 9px;
+        left: 12px;
+        right: 12px;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+}

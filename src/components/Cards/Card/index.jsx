@@ -1,5 +1,8 @@
 import React from 'react';
 
+// styled
+import './index.scss';
+
 const Card = () => {
   return (
     <div className="news__card">
