@@ -4,9 +4,11 @@ import Navbar from 'components/Navbar';
 import SearchBar from 'components/SearchBar';
 import Cards from 'components/Cards';
 import Pagination from 'components/Pagination';
+import Category from 'components/Category';
 
 const App = () => {
   const [page, setPage] = useState(1);
+  const [category, setCategory] = useState('technology');
 
   const handleChange = (e) => {
     const button = e.target.name;
@@ -20,14 +22,20 @@ const App = () => {
     }
   };
 
+  const handleCategory = (e) => {
+    setCategory(e.target.dataset.category);
+    setPage(1);
+  };
+
   return (
     <div className="App">
       <header>
         <Navbar />
         <SearchBar />
+        <Category handleClick={(e) => handleCategory(e)} />
       </header>
       <main>
-        <Cards page={page} />
+        <Cards page={page} category={category} />
         <Pagination page={page} handleClick={(e) => handleChange(e)} />
       </main>
       <footer>{/*  */}</footer>

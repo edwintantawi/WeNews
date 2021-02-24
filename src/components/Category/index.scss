@@ -1,0 +1,22 @@
+@import '../../index';
+.category-list {
+  padding: 16px 0 18px;
+  overflow: hidden;
+
+  .category-item {
+    // height: 30px;
+    padding: 6px 26px;
+    background-image: $grad-to-right;
+    margin-right: 12px;
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+      margin-right: 18px;
+    }
+  }
+}
+.category-name {
+  font-size: 15px;
+  margin-bottom: -5px;
+  font-weight: bold;
+}

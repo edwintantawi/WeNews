@@ -5,10 +5,10 @@ const axios = require('axios').default;
 
 // styled
 
-const Cards = ({ page }) => {
-  const API_KEY = '99b04cf0565a42959a298cd8a4a185ef';
-  // 72b3366bd3f242e8908da91567f9fc05
-  const API_ENDPOINT = `https://newsapi.org/v2/everything?apiKey=${API_KEY}&q=technology&page=${page}`;
+const Cards = ({ page, category }) => {
+  // const API_KEY = '99b04cf0565a42959a298cd8a4a185ef';
+  const API_KEY = '72b3366bd3f242e8908da91567f9fc05';
+  const API_ENDPOINT = `https://newsapi.org/v2/everything?apiKey=${API_KEY}&q=${category}&page=${page}`;
 
   const [datas, setDatas] = useState();
   const [loading, setLoading] = useState(true);
@@ -29,7 +29,7 @@ const Cards = ({ page }) => {
       .finally(() => {
         setLoading(false);
       });
-  }, [API_ENDPOINT, page]);
+  }, [API_ENDPOINT, page, category]);
 
   const loader = (
     <div className="d-flex align-items-center justify-content-center">
