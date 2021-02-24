@@ -7,6 +7,7 @@ const axios = require('axios').default;
 
 const Cards = ({ page }) => {
   const API_KEY = '99b04cf0565a42959a298cd8a4a185ef';
+  // 72b3366bd3f242e8908da91567f9fc05
   const API_ENDPOINT = `https://newsapi.org/v2/everything?apiKey=${API_KEY}&q=technology&page=${page}`;
 
   const [datas, setDatas] = useState();
@@ -14,6 +15,8 @@ const Cards = ({ page }) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    setDatas('');
+    setLoading(true);
     axios
       .get(API_ENDPOINT)
       .then((response) => {

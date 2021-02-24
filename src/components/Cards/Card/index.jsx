@@ -3,6 +3,9 @@ import React from 'react';
 // styled
 import './index.scss';
 
+// image
+import { no_image } from 'assets';
+
 const Card = ({ data }) => {
   // handle author
   if (data.author !== null) {
@@ -14,6 +17,7 @@ const Card = ({ data }) => {
     data.author = '-';
   }
 
+  data.urlToImage = data.urlToImage ?? no_image;
   data.publishedAt = new Date(data.publishedAt).toUTCString();
 
   return (
@@ -33,11 +37,13 @@ const Card = ({ data }) => {
           <p>{data.description}</p>
         </div>
       </div>
-      <div>
-        <span className="author">author : {data.author}</span>
+      <div className="text-right">
+        <span className="time">{data.publishedAt}</span>
         <hr className="sp-bold" />
-        <div className="news__card__footer text-right">
-          <span className="time">{data.publishedAt}</span>
+        <div className="news__card__footer text-left">
+          <span className="author">
+            <b>author</b> : {data.author}
+          </span>
         </div>
       </div>
     </a>

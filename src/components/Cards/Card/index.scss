@@ -15,7 +15,7 @@
   }
 
   &__head {
-    background-image: url('../../../assets/images/dummy.jpg');
+    background-image: url('../../../assets/images/loading-state.svg');
     background-position: center;
     background-size: cover;
     background-color: $secondary-dark;
@@ -25,10 +25,6 @@
 
     position: relative;
     transition: 300ms ease-in-out;
-
-    // &:hover {
-    //   transform: scale(1.2);
-    // }
 
     &::after {
       content: '';
@@ -78,7 +74,9 @@
       }
     }
   }
-
+  .time {
+    font-size: 13px;
+  }
   &__footer {
     font-size: 13px;
   }

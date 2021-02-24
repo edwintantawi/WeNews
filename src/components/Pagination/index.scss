@@ -1,7 +1,14 @@
 @import '../../index.scss';
 .pagination {
   text-align: center;
-  margin: 50px 0 100px;
+  // margin: 50px 0 100px;
+  padding: 16px 0 20px;
+  background-color: $primary-dark;
+  width: 100%;
+
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
 
   @include breakpoint(lg) {
     text-align: right;
@@ -10,8 +17,8 @@
   button {
     border: 1px solid white;
     border-radius: 0;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
     background-color: $secondary-dark;
     @include breakpoint(md) {
       width: 40px;
@@ -19,6 +26,7 @@
     }
     &.active {
       background-color: $accent-yellow;
+      background-image: $grad-to-top;
       font-weight: bold;
     }
     &.disabled {

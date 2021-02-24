@@ -3,6 +3,10 @@
 nav {
   background-color: $primary-dark;
   padding: 14px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
 
   img {
     height: 40px;
