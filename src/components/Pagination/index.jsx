@@ -4,10 +4,6 @@ import React from 'react';
 import './index.scss';
 
 const Pagination = ({ page, handleClick }) => {
-  function isActive(e) {
-    console.log(e);
-  }
-
   return (
     <div className="pagination">
       <div className="container">

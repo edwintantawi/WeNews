@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import './index.scss';
 const axios = require('axios').default;
@@ -13,20 +13,20 @@ const Cards = ({ page }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  // useEffect(() => {
-  //   axios
-  //     .get(API_ENDPOINT)
-  //     .then((response) => {
-  //       setDatas(response.data.articles);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //       setError(true);
-  //     })
-  //     .finally(() => {
-  //       setLoading(false);
-  //     });
-  // }, [page]);
+  useEffect(() => {
+    axios
+      .get(API_ENDPOINT)
+      .then((response) => {
+        setDatas(response.data.articles);
+      })
+      .catch((error) => {
+        console.log(error);
+        setError(true);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [API_ENDPOINT, page]);
 
   const loader = (
     <div className="d-flex align-items-center justify-content-center">
