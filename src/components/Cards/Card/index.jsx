@@ -3,30 +3,44 @@ import React from 'react';
 // styled
 import './index.scss';
 
-const Card = () => {
+const Card = ({ data }) => {
+  // handle author
+  if (data.author !== null) {
+    if (data.author.search(/(https:)|(http:)/i) === 0) {
+      const endurl = data.author.split('/');
+      data.author = endurl[endurl.length - 1];
+    }
+  } else {
+    data.author = '-';
+  }
+
+  data.publishedAt = new Date(data.publishedAt).toUTCString();
+
   return (
-    <div className="news__card">
-      <div className="wrap">
-        <div className="news__card__head"></div>
-        <div className="text">
-          <div className="news__source">BBC News</div>
-          <h3 className="news__title">
-            Michelle Obama to star in Netflix children's show Waffles + Mochi
-          </h3>
+    <a className="news__card" href={data.url}>
+      <div className="div">
+        <div className="wrap">
+          <div
+            className="news__card__head"
+            style={{ backgroundImage: `url(${data.urlToImage})` }}
+          ></div>
+          <div className="text">
+            <div className="news__source">{data.source.name}</div>
+            <h3 className="news__title">{data.title}</h3>
+          </div>
+        </div>
+        <div className="news__card__body">
+          <p>{data.description}</p>
         </div>
       </div>
-      <div className="news__card__body">
-        <p>
-          The former US first lady will play a supermarket owner alongside
-          puppets named Waffles and Mochi.
-        </p>
+      <div>
+        <span className="author">author : {data.author}</span>
         <hr className="sp-bold" />
+        <div className="news__card__footer text-right">
+          <span className="time">{data.publishedAt}</span>
+        </div>
       </div>
-      <div className="news__card__footer">
-        <span className="author">author : Catie Keck</span>
-        <span className="time">10:08:11 | 2021-02-09</span>
-      </div>
-    </div>
+    </a>
   );
 };
 

@@ -3,8 +3,12 @@
 .news__list {
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    column-gap: 16px;
+    grid-template-columns: 1fr;
+    column-gap: 20px;
     row-gap: 52px;
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
   }
 }
