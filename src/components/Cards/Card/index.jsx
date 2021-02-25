@@ -40,13 +40,13 @@ const Card = ({ data }) => {
           <p>{data.description}</p>
         </div>
       </div>
-      <div className="text-right">
-        <span className="time">{data.publishedAt}</span>
+      <div className="text-left">
+        <div className="author mb-1">
+          <b>author</b> : {data.author}
+        </div>
         <hr className="sp-bold" />
-        <div className="news__card__footer text-left">
-          <span className="author">
-            <b>author</b> : {data.author}
-          </span>
+        <div className="news__card__footer text-right">
+          <span className="time">{data.publishedAt}</span>
         </div>
       </div>
     </a>

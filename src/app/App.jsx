@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './App.scss';
+
+// component
 import Navbar from 'components/Navbar';
 import SearchBar from 'components/SearchBar';
 import Cards from 'components/Cards';
@@ -30,7 +31,6 @@ const App = () => {
   const handleSearch = (e) => {
     e === '' ? setCategory('technology') : setCategory(e);
     setPage(1);
-    console.log(category);
   };
 
   return (

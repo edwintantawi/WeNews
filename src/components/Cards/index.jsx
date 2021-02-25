@@ -1,15 +1,16 @@
-import Loader from 'components/Loader';
 import React, { useState, useEffect } from 'react';
+
+// component
+import Loader from 'components/Loader';
 import Card from './Card';
 import Alert from 'components/Alerts';
-import './index.scss';
-const axios = require('axios').default;
-
 // styled
+import './index.scss';
+
+const axios = require('axios').default;
 
 const Cards = ({ page, category }) => {
   const API_KEY = '99b04cf0565a42959a298cd8a4a185ef';
-  // const API_KEY = '72b3366bd3f242e8908da91567f9fc05';
   const API_ENDPOINT = `https://newsapi.org/v2/everything?apiKey=${API_KEY}&q=${category}&page=${page}`;
 
   const [datas, setDatas] = useState();
@@ -26,7 +27,7 @@ const Cards = ({ page, category }) => {
         setDatas(response.data.articles);
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
         setError(true);
       })
       .finally(() => {
