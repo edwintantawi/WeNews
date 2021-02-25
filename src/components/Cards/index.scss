@@ -1,7 +1,10 @@
 @import '../../index.scss';
 
 .news__list {
-  margin-bottom: 82px;
+  margin-bottom: 100px;
+  @include breakpoint(md) {
+    margin-bottom: 130px;
+  }
   .grid {
     display: grid;
     grid-template-columns: 1fr;
