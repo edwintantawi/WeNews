@@ -10,8 +10,7 @@ import './index.scss';
 const axios = require('axios').default;
 
 const Cards = ({ page, category }) => {
-  // const API_KEY = '99b04cf0565a42959a298cd8a4a185ef';
-  const API_KEY = 'c0854eee212e4f2f9f50bd4ef817f5b9';
+  const API_KEY = '99b04cf0565a42959a298cd8a4a185ef';
   const API_ENDPOINT = `https://newsapi.org/v2/everything?apiKey=${API_KEY}&q=${category}&page=${page}`;
 
   const [datas, setDatas] = useState();
