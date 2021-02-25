@@ -10,7 +10,9 @@ const Navbar = () => {
     <nav>
       <div className="container text-center">
         <h1 className="d-none">WeNews, a news aggregator web apps</h1>
-        <img src={logo_white} alt="WeNews" />
+        <a href="/">
+          <img src={logo_white} alt="WeNews" />
+        </a>
       </div>
     </nav>
   );

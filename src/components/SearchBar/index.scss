@@ -4,6 +4,10 @@
   margin-top: 72px;
   &__contain {
     margin: 6px 0 0;
+    display: flex;
+    background-color: $secondary-dark;
+    border-radius: 4px;
+    align-items: center;
     &__input {
       padding: 10px 16px;
       width: 100%;
@@ -12,6 +16,12 @@
       outline: none;
       border: none;
       border-radius: 4px;
+    }
+
+    &__search {
+      height: 26px;
+      color: white;
+      margin-right: 16px;
     }
   }
 }

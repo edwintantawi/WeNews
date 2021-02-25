@@ -24,10 +24,13 @@ const Card = ({ data }) => {
     <a className="news__card" href={data.url}>
       <div className="div">
         <div className="wrap">
-          <div
+          <img
+            src={data.urlToImage}
+            alt={data.author}
             className="news__card__head"
-            style={{ backgroundImage: `url(${data.urlToImage})` }}
-          ></div>
+            loading="lazy"
+          />
+          <div className="shadow"></div>
           <div className="text">
             <div className="news__source">{data.source.name}</div>
             <h3 className="news__title">{data.title}</h3>

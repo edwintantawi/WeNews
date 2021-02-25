@@ -16,40 +16,35 @@
 
   &__head {
     background-image: url('../../../assets/images/loading-state.svg');
-    background-position: center;
-    background-size: cover;
     background-color: $secondary-dark;
     height: 200px;
-    // max-width: 370px;
     width: 100%;
-
+    object-fit: cover;
     position: relative;
     transition: 300ms ease-in-out;
+  }
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background-image: linear-gradient(
-        to top,
-        #181818fa,
-        #181818be,
-        rgba(0, 0, 0, 0)
-      );
-    }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    background-image: linear-gradient(
+      to top,
+      #181818fa,
+      #181818be,
+      rgba(0, 0, 0, 0)
+    );
   }
   .wrap {
     position: relative;
     width: fit-content;
     overflow: hidden;
     border-radius: 6px;
-    // height: 370px;
-    // max-width: 370px;
     width: 100%;
-
     margin-bottom: 12px;
 
     .text {

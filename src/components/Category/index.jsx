@@ -23,6 +23,7 @@ const categoryList = [
   'network',
   'amazon',
   'ai',
+  'android',
 ];
 
 const Category = ({ handleClick }) => {

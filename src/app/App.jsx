@@ -27,11 +27,17 @@ const App = () => {
     setPage(1);
   };
 
+  const handleSearch = (e) => {
+    e === '' ? setCategory('technology') : setCategory(e);
+    setPage(1);
+    console.log(category);
+  };
+
   return (
     <div className="App">
       <header>
         <Navbar />
-        <SearchBar />
+        <SearchBar handleChange={(e) => handleSearch(e)} />
         <Category handleClick={(e) => handleCategory(e)} />
       </header>
       <main>
