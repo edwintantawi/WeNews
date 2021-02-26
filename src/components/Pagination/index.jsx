@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 // styled
 import './index.scss';
@@ -65,6 +66,11 @@ const Pagination = ({ page, handleClick }) => {
       </div>
     </div>
   );
+};
+
+Pagination.propTypes = {
+  page: propTypes.number,
+  handleClick: propTypes.func,
 };
 
 export default Pagination;

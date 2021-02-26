@@ -26,6 +26,7 @@ const App = () => {
   const handleCategory = (e) => {
     setCategory(e.target.dataset.category);
     setPage(1);
+    document.querySelector('.search__bar__contain__input').value = '';
   };
 
   const handleSearch = (e) => {

@@ -1,17 +1,12 @@
 import React from 'react';
-
-// style
-const style = {
-  fontSize: 14,
-  flexWrap: 'wrap',
-};
+import propTypes from 'prop-types';
 
 const Alert = ({ type, message, action }) => {
   return (
     <div
       className={`alert alert-${type} d-flex justify-content-between`}
       role="alert"
-      style={style}
+      style={{ fontSize: 14, flexWrap: 'wrap' }}
     >
       {message}
       <a href="/" className="alert-link mt-3 mt-md-0">
@@ -19,6 +14,12 @@ const Alert = ({ type, message, action }) => {
       </a>
     </div>
   );
+};
+
+Alert.propTypes = {
+  type: propTypes.string,
+  message: propTypes.string,
+  action: propTypes.string,
 };
 
 export default Alert;

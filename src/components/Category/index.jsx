@@ -1,5 +1,5 @@
 import React from 'react';
-
+import propTypes from 'prop-types';
 // style
 import './index.scss';
 
@@ -63,6 +63,10 @@ const Category = ({ handleClick }) => {
       </div>
     </section>
   );
+};
+
+Category.propTypes = {
+  handleClick: propTypes.func,
 };
 
 export default Category;

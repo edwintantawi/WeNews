@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import propTypes from 'prop-types';
 // component
 import Loader from 'components/Loader';
 import Card from './Card';
@@ -63,6 +63,11 @@ const Cards = ({ page, category }) => {
       </div>
     </section>
   );
+};
+
+Card.propTypes = {
+  page: propTypes.number,
+  category: propTypes.string,
 };
 
 export default Cards;

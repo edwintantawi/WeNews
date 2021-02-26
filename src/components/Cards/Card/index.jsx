@@ -1,5 +1,5 @@
 import React from 'react';
-
+import propTypes from 'prop-types';
 // styled
 import './index.scss';
 
@@ -51,6 +51,9 @@ const Card = ({ data }) => {
       </div>
     </a>
   );
+};
+Card.propTypes = {
+  data: propTypes.object,
 };
 
 export default Card;
